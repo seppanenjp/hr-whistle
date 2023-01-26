@@ -33,8 +33,5 @@
     ],
     "exec": "npm run dev",
     "ext": "ts"
-  },
-  "engines": {
-    "node": "16.17.1"
   }
 }
