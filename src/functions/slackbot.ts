@@ -27,10 +27,10 @@ const app = new App({
 
 app.message(':hr-whistle:', async ({ message, say }) => {
   console.log('msg', message);
-  message.ts
+  (message as any).thread_ts
     ? await say({
         text: msg,
-        thread_ts: message.ts,
+        thread_ts: (message as any).thread_ts,
       })
     : await say(msg);
 });
