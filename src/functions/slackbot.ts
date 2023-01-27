@@ -24,7 +24,12 @@ const app = new App({
 });
 
 app.message(':hr-whistle:', async ({ message, say }) => {
-  await say('https://youtu.be/IwLSrNu1ppI');
+  await say({
+    text: '*Phwwwwwhht!* \n https://youtu.be/IwLSrNu1ppI',
+    thread_ts: (message as any).thread_ts
+      ? (message as any).thread_ts
+      : message.ts,
+  });
 });
 
 export async function handler(
