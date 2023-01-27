@@ -24,27 +24,14 @@ const app = new App({
 });
 
 app.message(':hr-whistle:', async ({ message, say }) => {
-  console.log(message);
   await say('https://youtu.be/IwLSrNu1ppI');
 });
-
-/*(async () => {
-  await app.start(process.env.PORT || 4000);
-  console.log('⚡️ Bolt app started');
-})();
-
-receiver.router.get('/', (req, res) => {
-  res.send('Hello there!');
-}); */
 
 export async function handler(
   event: APIGatewayEvent,
   context: Context
 ): Promise<IHandlerResponse> {
-  const payload: any = parseRequestBody(
-    event.body,
-    event.headers['content-type']
-  );
+  const payload = parseRequestBody(event.body, event.headers['content-type']);
 
   if (isUrlVerificationRequest(payload)) {
     return {
