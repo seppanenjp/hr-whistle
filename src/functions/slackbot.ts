@@ -33,7 +33,8 @@ app.message(':hr-whistle:', async ({ message, say }) => {
 });
 
 export async function handler(
-  event: APIGatewayEvent
+  event: APIGatewayEvent,
+  context: Context
 ): Promise<IHandlerResponse> {
   const payload = parseRequestBody(event.body, event.headers['content-type']);
 
