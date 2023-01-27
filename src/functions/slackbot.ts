@@ -26,6 +26,7 @@ const app = new App({
 });
 
 app.message(':hr-whistle:', async ({ message, say }) => {
+  console.log('msg', message);
   message.ts
     ? await say({
         text: msg,
