@@ -2,7 +2,7 @@
     "compilerOptions": {
       "target": "es6",
       "module": "commonjs",
-      "outDir": "public",
+      "outDir": "netlify",
       "rootDir": "src",
       "sourceMap": false,
       "esModuleInterop": true,
@@ -11,6 +11,6 @@
       "noImplicitAny" :true
     },
     "include": ["src/**/*.ts"],
-    "exclude": ["node_modules", ".vscode", "public"]
+    "exclude": ["node_modules", ".vscode", "netlify"]
   }
   

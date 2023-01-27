@@ -1,4 +1,4 @@
-import { IHandlerResponse } from './types';
+import { IHandlerResponse } from '../types';
 import { App, ExpressReceiver } from '@slack/bolt';
 import { APIGatewayEvent, Context } from 'aws-lambda';
 import { config } from 'dotenv';
@@ -6,7 +6,7 @@ import {
   parseRequestBody,
   isUrlVerificationRequest,
   generateReceiverEvent,
-} from './utils';
+} from '../utils';
 import { ReceiverEvent } from '@slack/bolt';
 
 if (process.env.NODE_ENV !== 'production') {
