@@ -26,7 +26,6 @@ const app = new App({
 });
 
 app.message(':hr-whistle:', async ({ message, say }) => {
-  console.log('msg', message);
   (message as any).thread_ts
     ? await say({
         text: msg,
