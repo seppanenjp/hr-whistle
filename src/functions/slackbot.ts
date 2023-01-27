@@ -13,6 +13,8 @@ if (process.env.NODE_ENV !== 'production') {
   config();
 }
 
+const msg = '*Phwwwwwhht!* \n https://youtu.be/IwLSrNu1ppI';
+
 const receiver = new ExpressReceiver({
   signingSecret: process.env.SIGNING_SECRET,
   processBeforeResponse: true,
@@ -24,12 +26,12 @@ const app = new App({
 });
 
 app.message(':hr-whistle:', async ({ message, say }) => {
-  await say({
-    text: '*Phwwwwwhht!* \n https://youtu.be/IwLSrNu1ppI',
-    thread_ts: (message as any).thread_ts
-      ? (message as any).thread_ts
-      : message.ts,
-  });
+  message.ts
+    ? await say({
+        text: msg,
+        thread_ts: message.ts,
+      })
+    : await say(msg);
 });
 
 export async function handler(
