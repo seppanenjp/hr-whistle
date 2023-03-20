@@ -13,7 +13,7 @@ if (process.env.NODE_ENV !== 'production') {
   config();
 }
 
-const msg = '*Phwwwwwhht!* \n https://youtu.be/IwLSrNu1ppI';
+const msg = '*Phwwwwwhht!* \n https://youtu.be/_Uz1VgH36Kw';
 
 const receiver = new ExpressReceiver({
   signingSecret: process.env.SIGNING_SECRET,
